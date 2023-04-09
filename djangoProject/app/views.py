@@ -40,3 +40,41 @@ def something(request):
     print(request.GET)
     print(request.POST)
     return HttpResponse(request.method)
+
+def something(request):
+
+    print(request.method)
+    print(request.GET)
+    print(request.POST)
+    return HttpResponse(request.method)
+
+from app.models import *
+def orm(request):
+    # 测试orm操作表中的数据
+    # # 添加数据
+    # Department.objects.create(title='销售部')
+    # Department.objects.create(title='IT部')
+    # Department.objects.create(title='打杂部')
+
+    # UserInfo.objects.create(name='admin',password='123',age=19)
+    # UserInfo.objects.create(name='user',password='123',age=20)
+
+    # 删除
+    # # 删除id为3的
+    # UserInfo.objects.filter(id=1).delete()
+    # # 删除全部
+    # UserInfo.objects.all().delete()
+
+    #查询数据
+    # # 查询所有数据，数组
+    # list = UserInfo.objects.all()
+    # print(list)
+    # for li in list:
+    #     print(li.id,li.name,li.password,li.age)
+    # # 得到id为3的数据，类似根据条件查询，是一个数组
+    # list = UserInfo.objects.filter(id=3)
+    # # 查询id为3的数据，只需要1条数据
+    # user = UserInfo.objects.filter(id=3).first()
+    # # 根据条件修改数据
+    # UserInfo.objects.filter(id=4).update(name='user')
+    return HttpResponse(list)

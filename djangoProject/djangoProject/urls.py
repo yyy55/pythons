@@ -17,6 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from app import views
+
 urlpatterns = [
     # path('admin/', admin.site.urls),
     # http://localhost/index/ ->函数
@@ -26,4 +28,5 @@ urlpatterns = [
     path('tpl/', views.tpl),
     path('news/', views.news),
     path('something/', views.something),
+    path('orm/', views.orm),
 ]
