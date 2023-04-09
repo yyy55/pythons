@@ -7,6 +7,10 @@ python manage.py startapp app
 
 到【INSTALLED_APPS】里边注册
 
+# 安装依赖的
 pip install requests
-
 pip install mysqlclient
+
+#对数据库创建或者修改的
+python manage.py makemigrations
+python manage.py migrate
