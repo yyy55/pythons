@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>user_list</h1>
+    <h2>{{ n1 }}</h2>
+    <h3>{{ n2 }}</h3>
+    <h3>{{ n2.0 }}</h3>
+    <h3>{{ n2.1 }}</h3>
+    <div>
+        {% for item in n2 %}
+        <span>{{ item }}</span>
+        {% endfor %}
+    </div>
+    <h4>{{ n3 }}</h4>
+    <h4>{{ n3.name }}</h4>
+    <h4>{{ n3.sex }}</h4>
+    <div>
+        {% for item,index in n3.items %}
+        <span>{{ item }}={{ index }}</span>
+        {% endfor %}
+    </div>
+    <img src="{% static 'img/1111.png' %}" alt="">
+</body>
+</html>
